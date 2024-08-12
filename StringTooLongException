@@ -1,0 +1,7 @@
+public class StringTooLongException extends SimpleException {
+	
+	public StringTooLongException(String message)
+	{
+		super (message);
+	}
+}
