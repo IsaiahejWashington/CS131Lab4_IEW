@@ -1,0 +1,25 @@
+import java.util.*;
+public class FinallyClass {
+	
+	public static void main (String[] args) {
+	
+	Scanner input = new Scanner(System.in);
+	System.out.print("Enter an Integer: ");
+	
+	try{
+		int x = input.nextInt();
+		System.out.println(x);
+	}
+	catch(InputMismatchException e) {
+		System.out.println("Threw an exception");
+	}
+	finally {
+		System.out.println("Closing the Scanner");
+		input.close();
+	}
+	
+	
+	
+}//end main
+
+}//end class
