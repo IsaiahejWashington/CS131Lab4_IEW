@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class SimpleException {
+
+	public SimpleException(String message) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		int getNumbers=0;
+	
+		while(getNumbers>-1) {
+		
+			System.out.print("Enter an integer: ");
+			int x = input.nextInt();
+			System.out.print("Enter another integer: ");
+			int y = input.nextInt();
+			
+			try {
+				int quotient = x / y;
+				System.out.println(quotient);
+			}
+			catch(ArithmeticException e) {
+				System.out.println("You cannot divide by zero!");
+				System.out.println(e.getMessage());
+			}
+			
+			System.out.print("Would you like to continue? ‐1 to quit ");
+			getNumbers = input.nextInt();
+		}
+		
+		input.close();
+
+	}//end main
+
+}//end class
